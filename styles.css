@@ -292,6 +292,22 @@ body {
     font-weight: 800;
 }
 
+.btn-add {
+    display: inline-block;
+    width: 100%;
+    padding: 10px; 
+    border: 2px solid #DB241B;
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: 800;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+
+.btn-add:hover {
+    background-color: #DB241B;
+}
+
 .info {
     padding: 100px 0px;
     display: flex;
