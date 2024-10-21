@@ -44,3 +44,20 @@ tabInputs.forEach(function(input){
     })
 
 });
+
+// Carrito
+const cartMenu = document.getElementById('cart-menu');
+const openCartButton = document.querySelector('.btn-flotante');
+const closeCartButton = document.querySelector('.close-cart');
+
+// Abrir el carrito 
+openCartButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    cartMenu.classList.add('open');
+});
+
+// Cerrar el carrito 
+closeCartButton.addEventListener('click', function() {
+    cartMenu.classList.remove('open');
+});
+
