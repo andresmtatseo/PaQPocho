@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago - PaQPocho</title>
+    <link rel="icon" href="images/logo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+
+        <div id="inicio "class="menu container">
+            <img class="logo-1" src="images/logo2.png" alt="Logo de Pa Q Pocho">
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="Menu de hamburguesa">
+            </label>
+            <nav class="navbar">
+                <div class="menu-1">
+                    <ul>
+                        <li><a href="#inicio">INICIO</a></li>
+                        <li><a href="#menu-inicio">MENU</a></li>
+                        <li><a href="#promociones">PROMOCIONES</a></li>
+                    </ul>   
+                </div>
+                <img class="logo-2" src="images/logo2.png" alt="Logo de Pa Q Pocho">
+                <div class="menu-2">
+                    <ul>
+                        <li><a href="#horario">HORARIO</a></li>
+                    </ul>
+                    <div class="socials">
+                        <a href="https://www.facebook.com/profile.php?id=100076567080293">
+                            <div class="social">
+                                <img src="images/s1.svg" alt="Icono de facebook">
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/paqpocho?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                            <div class="social">
+                                <img src="images/s3.svg" alt="icono de instagram">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+        <h2>Productos Seleccionados</h2>
+        <div id="selected-products"></div>
+        
+        <h2>Datos del Cliente</h2>
+        <form id="payment-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="address">Dirección:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <h3>Total: $<span id="total-amount">0.00</span></h3>
+
+            <button type="submit">Realizar Pago</button>
+        </form>
+    </main>
+
+    <footer class="footer container">
+        <img class="logo-2" src="images/logo2.png" alt="">
+        <div class="links">
+            <h4>Encuéntranos</h4>
+            <ul>
+                <li>Maracaibo, Venezuela</li><br/>
+                <li>Urb. Altamira Sector Club Hipico</li><br/>
+                <li>Telefono: 04122571018</li><br/>
+                <li>Correo Electronico: info@paqpocho.com</li>
+            </ul>
+        </div>
+        <div class="links">
+            <h4>Horario</h4>
+            <ul>
+                <li>Jueves a Martes: 7:30am a 11:30pm</li><br/>
+                <li>Miércoles: 4:30pm a 11:30pm</li><br/>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="links">
+            <h4>Politicas de Privacidad</h4>
+            <ul>
+                <li><a href="#">ALgo</li><br/>
+                <li><a href="#">ALgo</li><br/>
+                <li><a href="#">ALgo</li><br/>
+            </ul>
+        </div>
+        <div class="links">
+            <h4>Redes sociales</h4>
+            <div class="socials">
+                <a href="https://www.facebook.com/profile.php?id=100076567080293">
+                    <div class="social">
+                        <img src="images/s1.svg" alt="Icono de facebook">
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/paqpocho?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                    <div class="social">
+                        <img src="images/s3.svg" alt="icono de instagram">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="pago.js"></script>
+    
+</body>
+</html>

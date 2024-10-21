@@ -100,6 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
             total -= price;
             cartTotal.textContent = total.toFixed(2);
         });
+        localStorage.setItem('cart', JSON.stringify(cart));
     }
 
     // Captura de todos los botones de "Agregar"
