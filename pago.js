@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Obtener productos del local
+    // Obtener los productos
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const selectedProductsDiv = document.getElementById('selected-products');
     const totalAmountSpan = document.getElementById('total-amount');
 
-    // Mostrar
+    // Mostrar los productos
     if (cart.length > 0) {
         cart.forEach(item => {
             const productDiv = document.createElement('div');
@@ -15,16 +15,36 @@ document.addEventListener('DOMContentLoaded', () => {
         selectedProductsDiv.innerHTML = '<p>No hay productos en el carrito.</p>';
     }
 
-    // Calcular y mostrar total
+    // Calcular y mostrar el total de la compra
     const total = cart.reduce((sum, item) => sum + item.price, 0);
     totalAmountSpan.textContent = total.toFixed(2);
 
-    // Manejar el envío del formulario
+    // Metodos de pagos estoy cansado jefe
+    const metodoPagoSelect = document.getElementById('metodo-pago');
+    const pagoMovilSection = document.getElementById('pago-movil-section');
+    const cashSection = document.getElementById('cash-section');
+
+    metodoPagoSelect.addEventListener('change', function() {
+        const selectedMethod = this.value;
+
+        if (selectedMethod === 'pagomovil') {
+            pagoMovilSection.style.display = 'block';
+            cashSection.style.display = 'none';
+        } else if (selectedMethod === 'efectivo') {
+            cashSection.style.display = 'block';
+            pagoMovilSection.style.display = 'none';
+        } else {
+            pagoMovilSection.style.display = 'none';
+            cashSection.style.display = 'none';
+        }
+    });
+
+    // envio del formulariop
     document.getElementById('payment-form').addEventListener('submit', function(event) {
         event.preventDefault();
-        // procesar
+        
         alert('Pago realizado con éxito!');
-        // Limpiar local
         localStorage.removeItem('cart');
+        window.location.href = 'gracias.html';
     });
 });

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Inicialización de Swipers
+    // Swipers
     const swiper1 = new Swiper(".mySwiper-1", {
         slidesPerView: 1,
         spaceBetween: 30,
@@ -36,12 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Manejo de cambio de pestañas
+    // cambio pestanas
     const tabInputs = document.querySelectorAll(".tabInput");
 
     tabInputs.forEach(input => {
         input.addEventListener('change', () => {
-            const id = input.value; // Usamos el valor del radio button
+            const id = input.value;
             const thisSwiper = document.getElementById('swiper' + id);
 
             // Verifica si thisSwiper existe
@@ -53,18 +53,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Carrito
+    localStorage.removeItem('cart'); // limpio por si acaso
+    // carrito
     const cartMenu = document.getElementById('cart-menu');
     const openCartButton = document.querySelector('.btn-flotante');
     const closeCartButton = document.querySelector('.close-cart');
+    const payButton = document.getElementById('pay-button'); // Obtener el botón de pagar
 
-    // Abrir el carrito 
+    // Abrir
     openCartButton.addEventListener('click', function(e) {
         e.preventDefault();
         cartMenu.classList.add('open');
     });
 
-    // Cerrar el carrito 
+    // Cerrar 
     closeCartButton.addEventListener('click', function() {
         cartMenu.classList.remove('open');
     });
@@ -74,18 +76,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let cart = [];
     let total = 0;
 
-    // Función para agregar producto al carrito
+    // agregar producto al carrito
     function addToCart(name, price) {
-        // Crear el elemento HTML para el producto
         const cartItem = document.createElement('div');
         cartItem.classList.add('cart-item');
         cartItem.innerHTML = `
             <h4>${name}</h4>
             <span>$${price.toFixed(2)}</span>
-            <button class="remove-item">X</button>
+            <button class="remove-item"> X </button>
         `;
         
-        // Añadir producto al menú lateral del carrito
         cartItems.appendChild(cartItem);
 
         // Actualizar carrito y total
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('cart', JSON.stringify(cart));
     }
 
-    // Captura de todos los botones de "Agregar"
+    // Capturar los botones de agregar"
     const addButtons = document.querySelectorAll('.btn-add');
     addButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -113,4 +113,16 @@ document.addEventListener('DOMContentLoaded', () => {
             addToCart(productName, productPrice);
         });
     });
+
+    // Validar carrito antes de redirigir
+    payButton.addEventListener('click', (event) => {
+        event.preventDefault(); 
+
+        if (cart.length === 0) {
+            alert('Tu carrito esta vacio. Por favor, añade productos antes de proceder al pago.'); 
+        } else {
+            window.location.href = payButton.href; 
+        }
+    });
+    
 });

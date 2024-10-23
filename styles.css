@@ -84,6 +84,7 @@ body {
 }
 
 .btn-checkout {
+    display: inline-block;
     width: 100%;
     padding: 15px 35px;
     letter-spacing: 2px;
@@ -96,10 +97,7 @@ body {
     cursor: pointer;
     font-size: 16px;
     margin-top: 10px;
-}
-
-.btn-checkout a {
-    color: #ffffff;
+    text-align: center;
 }
 
 .btn-checkout:hover {
@@ -160,10 +158,6 @@ body {
     margin-left: 50px;
     display: flex;
     align-items: center;
-}
-
-.logo-1 {
-    width: 0;
 }
 
 .logo-2 {
@@ -514,4 +508,109 @@ body {
     font-size: 16px;
     margin-bottom: 5px;
     display: inline-block;
+}
+
+.pago-select option {
+    background-color: #000000; 
+    color: #ffffff; /
+}
+
+/* Contacto*/
+
+.contacto-section {
+    padding: 100px 0;
+    color: #ffffff;
+    text-align: center;
+    background-color: #0d0d0d;
+  }
+  
+  .contacto-section h2 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    margin-top: 150px; /* valor titulo */
+    color: #ffffff;
+    text-align: center;
+  }
+  .formulario-delivery {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #db241b;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 16px;
+  }
+  
+  .form-group input::placeholder {
+    color: #a7a7a7;
+  }
+  
+  .form-group select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  .btn-submit {
+    width: 100%;
+    padding: 15px;
+    border-radius: 50px;
+    background-color: #db241b;
+    color: #ffffff;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-submit:hover {
+    background-color: #ab1c15;
+  }
+
+  .gracias-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.gracias-container h1 {
+    color: #DB241B;
+    font-size: 2.5em;
+}
+
+.gracias-container p {
+    font-size: 1.2em;
+    color:#ffffff;
+}
+
+.gracias-container a {
+    color: #DB241B;
+    text-decoration: none;
+}
+
+.gracias-container a:hover {
+    text-decoration: underline;
 }
