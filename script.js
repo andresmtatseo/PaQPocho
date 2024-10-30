@@ -1,4 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // popup de confirmaci
+    function showConfirmationPopup(message) {
+    const confirmationPopup = document.getElementById("confirmation-popup");
+    confirmationPopup.textContent = message;
+    
+    confirmationPopup.classList.remove("hidden");
+    confirmationPopup.classList.add("show");
+    
+    setTimeout(() => {
+      confirmationPopup.classList.remove("show");
+      confirmationPopup.classList.add("hidden");
+    }, 2000);
+  }
+  
+  // el popup de error
+  function showErrorPopup(message) {
+    const errorPopup = document.getElementById("error-popup");
+    errorPopup.textContent = message;
+    
+    errorPopup.classList.remove("hidden");
+    errorPopup.classList.add("show");
+    
+    setTimeout(() => {
+      errorPopup.classList.remove("show");
+      errorPopup.classList.add("hidden");
+    }, 3000);
+  }
+
     // Swipers
     const swiper1 = new Swiper(".mySwiper-1", {
         slidesPerView: 1,
@@ -111,6 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const productPrice = parseFloat(button.getAttribute('data-price'));
 
             addToCart(productName, productPrice);
+            showConfirmationPopup("Se agregó el producto al carrito.");
         });
     });
 
@@ -119,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault(); 
 
         if (cart.length === 0) {
-            alert('Tu carrito esta vacio. Por favor, añade productos antes de proceder al pago.'); 
+            showErrorPopup('Tu carrito esta vacio. Por favor, añade productos antes de proceder al pago.');
         } else {
             window.location.href = payButton.href; 
         }
