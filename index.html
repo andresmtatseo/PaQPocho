@@ -8,6 +8,7 @@
         <title>PaQPocho FastFood</title>
         <link rel="icon" href="images/logo2.webp" type="image/x-icon">
     
+    
         <style>
             * {
                 margin: 0;
@@ -22,20 +23,20 @@
 }
         </style>
     
-        <!-- Carga asíncrona de fuentes de Google -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     
-        <!-- Carga de CSS no critico -->
-        <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'">
     
-        <!-- Carga de JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" defer></script>
 <body>
 
-    <a href="#" class="btn-flotante"> <img src="images/shopping_cart.svg" alt="Carrito de compras"></a>
+    <button class="btn-flotante">
+        <img src="images/shopping_cart.svg" alt="Carrito de compras">
+      </button>
+      
     <div id="cart-menu" class="cart-menu">
         <div class="cart-header">
             <h2>Tu Carrito</h2>
@@ -57,31 +58,31 @@
         <div id="inicio "class="menu container">
             <img class="logo-1" src="images/logo2.webp" alt="Logo PaQPocho">
             <input type="checkbox" id="menu" />
-            <img src="images/menu.webp" class="menu-icono" alt="Menu de hamburguesa">
+            <img src="images/menu.svg" class="menu-icono" alt="Menu de hamburguesa">
             </label>
             <nav class="navbar">
                 <div class="menu-1">
                     <ul>
-                        <li><a href="#inicio">INICIO</a></li>
-                        <li><a href="#menu-inicio">MENU</a></li>
-                        <li><a href="#promociones">PROMOCIONES</a></li>
+                        <li><a href="#inicio" aria-label="Ir a Inicio">INICIO</a></li>
+                        <li><a href="#menu-inicio" aria-label="Ir al Menu" >MENU</a></li>
+                        <li><a href="#promociones" aria-label="Ir a Promociones" >PROMOCIONES</a></li>
                     </ul>   
                 </div>
                 <img class="logo-2" src="images/logo2.webp" alt="Logo PaQPocho">
                 <div class="menu-2">
                     <ul>
-                        <li><a href="#ubicacion">UBICACION</a></li>
-                        <li><a href="#horario">HORARIO</a></li>
+                        <li><a href="#ubicacion" aria-label="Ir a Ubicación" >UBICACION</a></li>
+                        <li><a href="#horario" aria-label="Ir a Horario" >HORARIO</a></li>
                     </ul>
                     <div class="socials">
-                        <a href="https://www.facebook.com/profile.php?id=100076567080293">
+                        <a href="https://www.facebook.com/profile.php?id=100076567080293" aria-label="Visitar Facebook de PaQPocho" target="_blank">
                             <div class="social">
-                                <img src="images/s1.svg" alt="Icono de facebook">
+                                <img src="images/s1.svg" alt="Facebook PaQPocho">
                             </div>
                         </a>
-                        <a href="https://www.instagram.com/paqpocho?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                        <a href="https://www.instagram.com/paqpocho?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Visitar Instagram de PaQPocho" target="_blank">
                             <div class="social">
-                                <img src="images/s3.svg" alt="icono de instagram">
+                                <img src="images/s3.svg" alt="Instagram PaQPocho">
                             </div>
                         </a>
                     </div>
@@ -100,8 +101,8 @@
                                     Una hamburguesa es un sándwich que combina carne jugosa a la parrilla entre dos panes suaves, acompañada de ingredientes como queso, lechuga, tomate y salsas. Es un platillo versátil y sabroso, ideal para cualquier ocasión.
                                 </p>
                                 <div class="botones">
-                                    <a href="#menu-inicio" class="btn-1">comprar</a>
-                                    <a href="#menu-inicio" class="btn-1">menu</a>
+                                    <a href="#menu-inicio" aria-label="Ver Menu de Comidas" class="btn-1">comprar</a>
+                                    <a href="#menu-inicio" aria-label="Ver Menu de Comidas" class="btn-1">menu</a>
                                 </div>
                             </div>
                             <div class="slider-img">
@@ -117,8 +118,8 @@
                                     Una pizza familiar es perfecta para compartir, con masa crujiente, queso derretido y salsa de tomate. Se puede personalizar con ingredientes como pepperoni, jamón, champiñones o pimientos, ofreciendo una deliciosa opción para todos los gustos.    
                                 </p>
                                 <div class="botones">
-                                    <a href="#menu-inicio" class="btn-1">comprar</a>
-                                    <a href="#menu-inicio" class="btn-1">menu</a>
+                                    <a href="#menu-inicio" aria-label="Ver Menu de Comidas" class="btn-1">comprar</a>
+                                    <a href="#menu-inicio" aria-label="Ver Menu de Comidas" class="btn-1">menu</a>
                                 </div>
                             </div>
                             <div class="slider-img">
@@ -134,8 +135,8 @@
                                     Una hamburguesa especial destaca por sus ingredientes gourmet, como carne de alta calidad, queso artesanal, vegetales frescos y salsas caseras. Puede incluir toques únicos como aguacate, cebolla caramelizada, bacon crujiente o pan brioche, ofreciendo una experiencia de sabor más refinada y sofisticada.
                                 </p>
                                 <div class="botones">
-                                    <a href="#menu-inicio" class="btn-1">comprar</a>
-                                    <a href="#menu-inicio" class="btn-1">menu</a>
+                                    <a href="#menu-inicio" aria-label="Ver Menu de Comidas" class="btn-1">Comprar</a>
+                                    <a href="#menu-inicio" aria-label="Ver Menu de Comidas" class="btn-1">Menu</a>
                                 </div>
                             </div>
                             <div class="slider-img">
@@ -163,12 +164,12 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4>nuevo</h4>
+                                    <h3>nuevo</h3>
                                     <img src="images/food1.webp" alt="Hamburguesa especial">
 
                                 </div>
                                 <div class="product-txt">
-                                    <h4>Hamburguesa Especial</h4>
+                                    <h3>Hamburguesa Especial</h3>
                                     <p>calidad premium</p>
                                     <span class="price">$8.00</span>
                                     <button class="btn-add" data-name="hamburguesa-especial" data-price="8"><img src="images/add_shopping_cart.svg" alt="Añadir al carrito">Agregar</button>
@@ -179,12 +180,12 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4>nuevo</h4>
+                                    <h3>nuevo</h3>
                                     <img src="images/food.webp" alt="Hamburguesa clasica">
 
                                 </div>
                                 <div class="product-txt">
-                                    <h4>Hamburguesa Clasica</h4>
+                                    <h3>Hamburguesa Clasica</h3>
                                     <p>calidad premium</p>
                                     <span class="price">$7.00</span>
                                     <button class="btn-add" data-name="hamburguesa-clasica" data-price="7"><img src="images/add_shopping_cart.svg" alt="Añadir al carrito">Agregar</button>
@@ -195,12 +196,12 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4>Mas Vendido</h4>
+                                    <h3>Mas Vendido</h3>
                                     <img src="images/food2.webp" alt="Submarino">
 
                                 </div>
                                 <div class="product-txt">
-                                    <h4>Submarino</h4>
+                                    <h3>Submarino</h3>
                                     <p>calidad premium</p>
                                     <span class="price">$7.00</span>
                                     <button class="btn-add" data-name="submarino" data-price="7"><img src="images/add_shopping_cart.svg" alt="Añadir al carrito">Agregar</button>
@@ -211,12 +212,12 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4>nuevo</h4>
+                                    <h3>nuevo</h3>
                                     <img src="images/food3.webp" alt="submarino especial">
 
                                 </div>
                                 <div class="product-txt">
-                                    <h4>Submarino Especial</h4>
+                                    <h3>Submarino Especial</h3>
                                     <p>calidad premium</p>
                                     <span class="price">$9.50</span>
                                     <button class="btn-add" data-name="submarino-especial" data-price="9.50"><img src="images/add_shopping_cart.svg" alt="Añadir al carrito">Agregar</button>
@@ -238,12 +239,12 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4>nuevo</h4>
+                                    <h3>nuevo</h3>
                                     <img src="images/food4.webp" alt="Pizza familiar">
 
                                 </div>
                                 <div class="product-txt">
-                                    <h4>Pizza Familiar</h4>
+                                    <h3>Pizza Familiar</h3>
                                     <p>calidad premium</p>
                                     <span class="price">$14.000</span>
                                     <button class="btn-add" data-name="pizza-familiar" data-price="14"><img src="images/add_shopping_cart.svg" alt="Añadir al carrito">Agregar</button>
@@ -254,12 +255,12 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4>Mas Vendido</h4>
+                                    <h3>Mas Vendido</h3>
                                     <img src="images/food5.webp" alt="Pizza mediana">
 
                                 </div>
                                 <div class="product-txt">
-                                    <h4>Pizza Mediana</h4>
+                                    <h3>Pizza Mediana</h3>
                                     <p>calidad premium</p>
                                     <span class="price">$10.00</span>
                                     <button class="btn-add" data-name="pizza-mediana" data-price="10"><img src="images/add_shopping_cart.svg" alt="Añadir al carrito">Agregar</button>
@@ -270,12 +271,12 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4>nuevo</h4>
+                                    <h3>nuevo</h3>
                                     <img src="images/food6.webp" alt="Pizza individual">
 
                                 </div>
                                 <div class="product-txt">
-                                    <h4>Pizza Individual</h4>
+                                    <h3>Pizza Individual</h3>
                                     <p>calidad premium</p>
                                     <span class="price">$8.00</span>
                                     <button class="btn-add" data-name="pizza-individual" data-price="8"><img src="images/add_shopping_cart.svg" alt="Añadir al carrito">Agregar</button>
@@ -294,15 +295,15 @@
 
     <section id="promociones" class="info container">
         <div class="info-img">
-            <img src="images/food4.webp" alt="Combo de 2 pizzas familiares">
+            <img src="images/promo.webp" alt="Combo de 2 pizzas familiares">
         </div>
 
         <div class="info-txt">
             <h2>¡PROMOCION!</h2>
             <p>
-                ¡Disfruta nuestra promoción especial! Lleva <strong>2 pizzas familiares</strong> con los ingredientes de tu elección por un precio irresistible. Perfectas para compartir en familia o con amigos. ¡Más sabor por menos!
+                ¡Disfruta nuestra promoción especial! Lleva <b>2 pizzas familiares</b> con los ingredientes de tu elección por un precio irresistible. Perfectas para compartir en familia o con amigos. ¡Más sabor por menos!
             </p>
-            <a href="#menu-inicio" class="btn-2">Mas informacion</a>
+            <a href="#menu-inicio" aria-label="Menu de Comidas" class="btn-2">Mas informacion</a>
         </div>
     </section>
 
@@ -311,34 +312,34 @@
             <h2>horario</h2>
             <div class="horario-txt">
                 <div class="txt">
-                    <h4>Direccion</h4>
+                    <h3>Direccion</h3>
                     <p>Maracaibo, Venezuela</p>
                     <p>Urb. Altamira Sector Club Hipico</p>
                 </div>
                 <div class="txt">
-                    <h4>Horario</h4>
+                    <h3>Horario</h3>
                     <p>Jueves a Martes: 7:30am a 11:30pm</p>
                     <p>Miércoles: 4:30pm a 11:30pm</p>
                 </div>
                 <div class="txt">
-                    <h4>Telefono</h4>
+                    <h3>Telefono</h3>
                     <p>Delivery: 0412-2571018</p>
                     <p>Whatsapp: 0424-6063445</p>
                 </div>
                 <div class="txt">
-                    <h4>Redes sociales</h4>
+                    <h3>Redes sociales</h3>
                     <div class="socials">
-                        <a href="https://www.facebook.com/profile.php?id=100076567080293">
+                        <a href="https://www.facebook.com/profile.php?id=100076567080293" aria-label="Visitar Facebook de PaQPocho">
                             <div class="social">
-                                <img src="images/s1.svg" alt="Icono de facebook">
+                                <img src="images/s1.svg" alt="Facebook PaQPocho">
                             </div>
                         </a>
-                        <a href="https://www.instagram.com/paqpocho?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                        <a href="https://www.instagram.com/paqpocho?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Visitar Instagram de PaQPocho">
                             <div class="social">
-                                <img src="images/s3.svg" alt="icono de instagram">
+                                <img src="images/s3.svg" alt="Instagram PaQPocho">
                             </div>
                         </a>
-                    </div>
+                    </div> 
                 </div>
             </div>
         </div>
@@ -348,56 +349,64 @@
         <div class="horario-info container">
             <h2>Ubicación</h2>
         </div>
-        <iframe title="mapa" class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.9365724223726!2d-71.67292112429764!3d10.662031361291982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e899b7cc1a52871%3A0xc359223a55d34610!2sPaqPocho%20Pizzeria!5e0!3m2!1ses-419!2sve!4v1729647572279!5m2!1ses-419!2sve" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe 
+        title="mapa" 
+        class="mapa" 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.9365724223726!2d-71.67292112429764!3d10.662031361291982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e899b7cc1a52871%3A0xc359223a55d34610!2sPaqPocho%20Pizzeria!5e0!3m2!1ses-419!2sve!4v1729647572279!5m2!1ses-419!2sve" 
+        width="100%" 
+        height="500" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        sandbox="allow-scripts allow-same-origin">
+    </iframe>
     </section>
 
     <footer class="footer container">
-        <img class="logo-2" src="images/logo2.webp" alt="Logo PaQPocho">
         <div class="links">
-            <h4>Encuéntranos</h4>
+            <h3>Encuéntranos</h3>
             <ul>
-                <li>Maracaibo, Venezuela</li><br/>
-                <li>Urb. Altamira Sector Club Hipico</li><br/>
-                <li>Telefono: 04122571018</li><br/>
-                <li>Correo Electronico: info@paqpocho.com</li>
+                <li>Maracaibo, Venezuela</li>
+                <li>Urb. Altamira Sector Club Hípico</li>
+                <li>Teléfono: 04122571018</li>     
+                <li>Correo Electrónico: <a href="mailto:info@paqpocho.com" aria-label="Enviar correo electrónico a PaQPocho">info@paqpocho.com</a></li>
             </ul>
         </div>
         <div class="links">
-            <h4>Horario</h4>
+            <h3>Horario</h3>
             <ul>
-                <li>Jueves a Martes: 7:30am a 11:30pm</li><br/>
-                <li>Miércoles: 4:30pm a 11:30pm</li><br/>
-                <li></li>
-                <li></li>
+                <li>Jueves a Martes: 7:30 am a 11:30 pm</li>
+                <li>Miércoles: 4:30 pm a 11:30 pm</li>
             </ul>
         </div>
         <div class="links">
-            <h4>Politicas de Privacidad</h4>
+            <h3>Políticas de Privacidad</h3>
             <ul>
-                <li><a href="#">ALgo</li><br/>
-                <li><a href="#">ALgo</li><br/>
-                <li><a href="#">ALgo</li><br/>
+                <li><a href="/terminos-y-condiciones" aria-label="Ver términos y condiciones">Términos y Condiciones</a></li>
+                <li><a href="/devoluciones-y-reembolsos" aria-label="Ver políticas de devoluciones y reembolsos">Devoluciones y Reembolsos</a></li>
+                <li><a href="/politicas-de-pago" aria-label="Ver políticas de pago">Políticas de Pago</a></li>
             </ul>
         </div>
         <div class="links">
-            <h4>Redes sociales</h4>
+            <h3>Redes Sociales</h3>
             <div class="socials">
-                <a href="https://www.facebook.com/profile.php?id=100076567080293">
+                <a href="https://www.facebook.com/profile.php?id=100076567080293" aria-label="Visitar Facebook de PaQPocho" target="_blank">
                     <div class="social">
-                        <img src="images/s1.svg" alt="Icono de facebook">
+                        <img src="images/s1.svg" alt="Facebook PaQPocho">
                     </div>
                 </a>
-                <a href="https://www.instagram.com/paqpocho?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                <a href="https://www.instagram.com/paqpocho?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Visitar Instagram de PaQPocho" target="_blank">
                     <div class="social">
-                        <img src="images/s3.svg" alt="icono de instagram">
+                        <img src="images/s3.svg" alt="Instagram PaQPocho">
                     </div>
                 </a>
-            </div>
+            </div>            
         </div>
-    </footer>
+    </footer>    
 
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>
