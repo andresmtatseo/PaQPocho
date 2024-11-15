@@ -111,21 +111,28 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         
         cartItems.appendChild(cartItem);
-
+    
         // Actualizar carrito y total
         cart.push({ name, price });
         total += price;
         cartTotal.textContent = total.toFixed(2);
-
+    
+        // Guardar en localStorage al agregar un producto
+        localStorage.setItem('cart', JSON.stringify(cart));
+    
         // Eliminar productos del carrito
         cartItem.querySelector('.remove-item').addEventListener('click', () => {
+            // Actualizar el carrito visualmente y en el array
             cartItems.removeChild(cartItem);
             cart = cart.filter(item => item.name !== name);
             total -= price;
             cartTotal.textContent = total.toFixed(2);
+            
+            // Guardar en localStorage después de eliminar un producto
+            localStorage.setItem('cart', JSON.stringify(cart));
         });
-        localStorage.setItem('cart', JSON.stringify(cart));
     }
+    
 
     // Capturar los botones de agregar"
     const addButtons = document.querySelectorAll('.btn-add');
